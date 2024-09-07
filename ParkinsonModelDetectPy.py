@@ -48,8 +48,30 @@ class parkinsonModel:
         return prediction[0]
 
 class ParkinsonApp:
-    def __init__ (self, root_model):
+    def __init__ (self, root, model):
+        self.root = root
+        self.model = model
+        self.create_widgets()
+
+    def create_widgets(self):
+        self.root.title("Parkinson's Disease Detector")
+
+        # button to display 
+        btn_data = tk.Button(self.root, text = "Display Data", command=self.display_data)
+        btn_data.pack()
+
+        # button to display model accuracy
+        btn_accuracy = tk.Button(self.root, text = "Model Accuracy Display: ", command = self.show_accuracy)
+        btn_accuracy.pack()
+
+        # entry fields for prediction input
+        self.input_fields = []
+        for col in self.model.df.coluns[1:-1]:
+            label = tk.Label(self.root,text=f"Enter{col}:")
+
+
+
 
 
 # data path temporary sample
-#model = ParkinsonModel(data_path=r"C:\Users\parkinsons.data")
+model = parkinsonModel(data_path=r"C:\Users\parkinsons.data")
