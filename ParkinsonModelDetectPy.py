@@ -69,6 +69,10 @@ class ParkinsonApp:
         btn_accuracy = tk.Button(self.root, text="Show Model Accuracy", command=self.show_accuracy)
         btn_accuracy.pack()
 
+         # button to display "Information Terms"
+        btn_terms = tk.Button(self.root, text="Show Information Terms", command=self.display_information_terms)
+        btn_terms.pack(pady=10)
+
         # descriptive labels on put for better user understanding
         labels = [
     "Fundamental Frequency (Fo) in Hz:",
@@ -148,10 +152,29 @@ class ParkinsonApp:
         prediction = self.model.predict(input_data)
         self.result_label.config(text="Parkinson's Detected!" if prediction == 1 else "No Parkinson's Detected.")
 
+    def display_information_terms(self):
+        try:
+            with open("C:\\Users\\rodri\\Information_Terms.txt", "r", encoding="utf-8") as file:
+                terms_content = file.read()
+        except FileNotFoundError:
+            messagebox.showerror("File Error", "The file was not found.")
+            return
+
+        # window to display information terms
+        terms_window = tk.Toplevel(self.root)
+        terms_window.title("Terms Dictionary")
+
+        # create text widget to display the content
+        text_widget = tk.Text(terms_window, wrap="word", height=20, width=80)
+        text_widget.insert('1.0', terms_content)
+        text_widget.config(state='disabled')  # Disable editing
+        text_widget.pack(pady=10, padx=10)
+
+
 def main():
     # create an instance of the model and load the data
     # make sure to locate your data file
-    model = ParkinsonModel(data_path=r"C:\Users\parkinsons.data")
+    model = ParkinsonModel(data_path=r"C:\Users\rodri\parkinsons.data")
     model.load_data()
     model.train_model()
     
