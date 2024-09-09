@@ -1,0 +1,22 @@
+Fundamental Frequency (Fo): Normal values tend to range between 85 Hz to 255 Hz for males and females. Parkinson's patients typically have a much lower or irregular Fo due to vocal tremors.
+
+Max and Min Fundamental Frequencies (Fhi and Flo): These values for non-Parkinson individuals usually follow the natural range of human vocal frequencies (from 85 Hz to 300 Hz).
+
+RAP (Relative Average Perturbation):
+Normal: Typically below 0.01 for healthy individuals.
+
+PPQ (Period Perturbation Quotient):
+Normal: Generally below 0.01 for healthy individuals.
+
+DDP (Difference of Difference of Periods):
+Normal: Usually below 0.05.
+
+Jitter (Percentage and Absolute): Jitter represents the frequency variation in voice signals. Non-Parkinson individuals tend to have lower jitter values, generally close to 0%, while Parkinson’s patients often have higher jitter values due to vocal instability.
+
+Shimmer: Shimmer measures amplitude variation in the voice. For non-Parkinson individuals, shimmer values tend to be low, typically around 0.1 to 0.5 dB. Higher shimmer values may indicate vocal instability, which is common in Parkinson's patients.
+
+NHR (Noise to Harmonics Ratio): NHR indicates the amount of noise in a voice signal. Non-Parkinson individuals generally have lower NHR values. For non-Parkinson’s individuals, values are typically around 0.1 or lower. Higher values may indicate vocal issues due to Parkinson's disease.
+
+HNR (Harmonics to Noise Ratio): HNR is the inverse of NHR and is higher in non-Parkinson individuals. Normal HNR values should be around 20 dB or higher. Lower values indicate a noisier vocal signal, which is common in Parkinson’s patients.
+
+RPDE, DFA, PPE: These are nonlinear dynamic measures and tend to be higher in Parkinson's patients. There aren’t clear-cut “normal” values for these features, but lower values generally indicate a healthier vocal signal.
