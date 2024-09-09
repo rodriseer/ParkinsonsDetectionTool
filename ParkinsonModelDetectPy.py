@@ -149,16 +149,17 @@ class ParkinsonApp:
         self.result_label.config(text="Parkinson's Detected!" if prediction == 1 else "No Parkinson's Detected.")
 
 def main():
-    # Create an instance of the model and load the data
-    model = ParkinsonModel(data_path=r"C:\Users\rodri\parkinsons.data")
+    # create an instance of the model and load the data
+    # make sure to locate your data file
+    model = ParkinsonModel(data_path=r"C:\Users\parkinsons.data")
     model.load_data()
     model.train_model()
     
-    # Create the main window for the app
+    # create the main window for the app
     root = tk.Tk()
     app = ParkinsonApp(root, model)
     
-    # Run the Tkinter main loop
+    # run the tkinter main loop
     root.geometry("1280x720")
     root.mainloop()
 
