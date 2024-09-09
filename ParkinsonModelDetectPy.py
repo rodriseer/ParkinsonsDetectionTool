@@ -154,7 +154,8 @@ class ParkinsonApp:
 
     def display_information_terms(self):
         try:
-            with open("C:\\Users\\rodri\\Information_Terms.txt", "r", encoding="utf-8") as file:
+            # make sure that the file path is correct
+            with open("C:\\Users\\Information_Terms.txt", "r", encoding="utf-8") as file:
                 terms_content = file.read()
         except FileNotFoundError:
             messagebox.showerror("File Error", "The file was not found.")
@@ -174,7 +175,7 @@ class ParkinsonApp:
 def main():
     # create an instance of the model and load the data
     # make sure to locate your data file
-    model = ParkinsonModel(data_path=r"C:\Users\rodri\parkinsons.data")
+    model = ParkinsonModel(data_path=r"C:\Users\parkinsons.data")
     model.load_data()
     model.train_model()
     
