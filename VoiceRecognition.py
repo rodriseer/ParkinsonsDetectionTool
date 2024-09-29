@@ -4,12 +4,12 @@ import wavio
 
 
 """
-using sounddevice to capture a 5 seconds voice from user
-saves as voiceOutput.wav file
+using sounddevice to capture a 5 seconds voice from user.
+saves the voice recording as voiceOutput.wav file
 
-change parameters as needed, such as 'duration = int'
+change parameters as needed, such as 'duration(int) = value'
 
-will implement the voice data extraction through this file
+futurely -> will implement the voice data extraction through this file
 """
 def record_audio(filename, duration=5, fs=44100):
     print(f"Say 'Ah' for 15 seconds...")
